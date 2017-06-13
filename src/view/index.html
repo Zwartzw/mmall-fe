@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%= require('html-loader!./layout/html-head.html') %>
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>mmall电商网站</title>
+</head>
 <body>
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    终于生效了
+<!--     <div>
+        <a href="" class="link">text</a>
+        <a href="" class="link-text">text</a>
+    </div>
+    <div>
+        <a href="" class="btn">text</a>
+        <a href="" class="btn btn-mini">text</a>
+    </div>
+    <div>
+        <div class="loading"></div>
+    </div> -->
+    <div>
+        <i class="fa fa-user"></i>
+    </div>
+
+    <%= require('html-loader!./layout/footer.html') %>
 </body>
 </html>
