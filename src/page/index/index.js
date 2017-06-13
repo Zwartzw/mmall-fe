@@ -3,6 +3,8 @@
  */
 
 'use strict';
-
-require('./layout.css');
-require('node_modules/font-awesome/css/font-awesome.min.css');
+// require('./index.css');
+require('page/common/nav/index.js');
+require('page/common/index.js');
+// require('page/common/header/index.js');
+var _mm = require('util/mm.js');
