@@ -2,12 +2,14 @@
 * @Author: WillGiab
 * @Date:   2017-06-13 23:26:03
 * @Last Modified by:   WillGiab
-* @Last Modified time: 2017-06-14 00:38:21
+* @Last Modified time: 2017-06-14 11:51:29
 */
 
 'use strict';
 require('./index.css');
 var _mm = require('util/mm.js');
+var _mm = require('service/user-service.js');
+
 var nav = {
     init : function(){
         this.bindEvent();
@@ -33,11 +35,22 @@ var nav = {
         });
 
     },
+    // 加载用户信息
     loadUserInfo : function(){
-
+        _user.checkLogin(function(res){
+            $('.user.not-login').hide().siblings('.user.login').show()
+                .find('.username').text(res.username);
+        }, function(errMsg){
+            // do nothing
+        });
     },
+    // 加载购物车数量
     loadCartCount : function(){
-
+        _cart.getCartCount(function(res){
+            $('.nav .cart-count').text(res || 0);
+        }, function(errMsg){
+            $('.nav .cart-count').text(0);
+        });
     }
 };
 
