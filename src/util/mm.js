@@ -54,8 +54,8 @@ var _mm = {
         alert(msg||'操作成功！')
     },
     // 错误提示
-    successTips : function(msg){
-        alert(msg||'好像哪裏不對了~')
+    errorTips : function(msg){
+        alert(msg || '哪里不对了~');
     },
     // 表单验证,支持非空判断，手机、邮箱格式判断等。
     validate : function(){
