@@ -2,13 +2,14 @@
 * @Author: WillGiab
 * @Date:   2017-06-13 23:26:03
 * @Last Modified by:   WillGiab
-* @Last Modified time: 2017-06-14 11:51:29
+* @Last Modified time: 2017-06-14 12:10:21
 */
 
 'use strict';
 require('./index.css');
 var _mm = require('util/mm.js');
-var _mm = require('service/user-service.js');
+var _user = require('service/user-service.js');
+var _cart = require('service/cart-service.js');
 
 var nav = {
     init : function(){
@@ -45,7 +46,7 @@ var nav = {
         });
     },
     // 加载购物车数量
-    loadCartCount : function(){
+    loadCartCount : function(res){
         _cart.getCartCount(function(res){
             $('.nav .cart-count').text(res || 0);
         }, function(errMsg){
