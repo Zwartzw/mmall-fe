@@ -6,7 +6,7 @@
 var Hogan = require('hogan');
 var conf = {
     serverHost : ''
-}
+};
 var _mm = {
     //网络请求
     request : function (param) {
@@ -21,8 +21,8 @@ var _mm = {
                     typeof param.success === 'function' && param.success(res.data, res.msg);
                 }else if(10===res.status){
                     //没有登陆状态，需要强制登陆
-                    this.doLogin();
-                }else if(1===res.status){
+                    _this.doLogin();
+                }else if(1 === res.status){
                     //请求数据错误
                     typeof param.error === 'function' && param.error(res.msg);
                 }
@@ -51,14 +51,14 @@ var _mm = {
     },
     // 成功提示
     successTips : function(msg){
-        alert(msg||'操作成功！')
+        alert(msg||'操作成功！');
     },
     // 错误提示
     errorTips : function(msg){
         alert(msg || '哪里不对了~');
     },
     // 表单验证,支持非空判断，手机、邮箱格式判断等。
-    validate : function(){
+    validate : function(value, type){
         var value = $.trim(value);
         // 非空验证
         if('require' === type){
