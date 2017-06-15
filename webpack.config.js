@@ -22,11 +22,11 @@ var getHtmlConfig = function (name,title) {
 
 config = {
     entry: {
-        'common'        :['./src/page/common/index.js'],
-        'index'         :['./src/page/index/index.js'],
-        'user-login'    :['./src/page/user-login/index.js'],
-        'result'        :['./src/page/result/index.js'],
-
+        'common'            :['./src/page/common/index.js'],
+        'index'             :['./src/page/index/index.js'],
+        'user-login'        :['./src/page/user-login/index.js'],
+        'user-register'     :['./src/page/user-register/index.js'],
+        'result'            :['./src/page/result/index.js']
     },
     output:{
         path:'./dist',
@@ -61,6 +61,7 @@ config = {
         //将css单独打包到文件
         new ExtractTextPlugin("css/[name].css"),
         //html模板处理
+        new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登陆')),
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
