@@ -12,4 +12,4 @@ var _mm     = require('util/mm.js');
 
 navSide.init({
     name:'order-list'
-})
+});
