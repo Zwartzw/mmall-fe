@@ -28,3 +28,7 @@ $(function() {
         $slider.data('unslider')[forward]();
     });
 });
+
+$(function () {
+    $('.banner').unslider();
+})
