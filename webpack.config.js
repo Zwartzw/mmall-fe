@@ -22,15 +22,17 @@ var getHtmlConfig = function (name,title) {
 
 config = {
     entry: {
-        'common'                :['./src/page/common/index.js'],
-        'index'                 :['./src/page/index/index.js'],
-        'user-login'            :['./src/page/user-login/index.js'],
-        'user-register'         :['./src/page/user-register/index.js'],
-        'user-center'           :['./src/page/user-center/index.js'],
-        'user-center-update'    :['./src/page/user-center-update/index.js'],
-        'user-pass-update'      :['./src/page/user-pass-update/index.js'],
-        'user-pass-reset'       :['./src/page/user-pass-reset/index.js'],
-        'result'                :['./src/page/result/index.js']
+        'common'                : ['./src/page/common/index.js'],
+        'index'                 : ['./src/page/index/index.js'],
+        'list'                  : ['./src/page/list/index.js'],
+        'detail'                : ['./src/page/detail/index.js'],
+        'user-login'            : ['./src/page/user-login/index.js'],
+        'user-register'         : ['./src/page/user-register/index.js'],
+        'user-center'           : ['./src/page/user-center/index.js'],
+        'user-center-update'    : ['./src/page/user-center-update/index.js'],
+        'user-pass-update'      : ['./src/page/user-pass-update/index.js'],
+        'user-pass-reset'       : ['./src/page/user-pass-reset/index.js'],
+        'result'                : ['./src/page/result/index.js']
     },
     output:{
         path:'./dist',
@@ -72,6 +74,8 @@ config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果'))
     ]
 

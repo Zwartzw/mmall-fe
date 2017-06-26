@@ -31,4 +31,4 @@ $(function() {
 
 $(function () {
     $('.banner').unslider();
-})
+});
