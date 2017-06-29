@@ -30,5 +30,5 @@ var _product = {
             error   : reject
         });
     }
-}
+};
 module.exports = _product;

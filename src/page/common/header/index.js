@@ -19,7 +19,7 @@ var header = {
         if(keyword){
             //keyword存在，则回填输入框
             $('#search-input').val(keyword);
-        };
+        }
     },
     bindEvent : function(){
         var _this = this;
@@ -39,7 +39,7 @@ var header = {
         var keyword = $.trim($('#search-input').val());
         // 如果提交的时候有keyword，正常跳转到list页；
         if(keyword){
-            window.location.href = './list.html?keyword=' +keyword;
+            window.location.href = './view/list.html?keyword=' +keyword;
         }else{
             //keyword为空，直接返回首页
             _mm.goHome();
