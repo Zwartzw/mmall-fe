@@ -1,8 +1,8 @@
 /*
 * @Author: 0284
-* @Date:   2017-05-28 19:45:49
+* @Date:   2017-06-28 19:45:49
 * @Last Modified by:   0284
-* @Last Modified time: 2017-05-29 18:39:01
+* @Last Modified time: 2017-06-29 18:39:01
 */
 
 'use strict';
@@ -89,4 +89,4 @@ var page = {
 };
 $(function(){
     page.init();
-})
+});
