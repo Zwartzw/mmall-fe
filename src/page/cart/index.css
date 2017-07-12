@@ -8,7 +8,7 @@
 .cart-header{
     background: #eee;
 }
-.cart-table .cart-cell{
+.cart-header .cart-cell{
     height: 40px;
     line-height: 40px;
 }
@@ -70,6 +70,7 @@
 .cart-table .cell-total{
     width:13%;
     text-align: center;
+    font-weight: bold;
 }
 .cart-table .cell-opera{
     width:10%;
