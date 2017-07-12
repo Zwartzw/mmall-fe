@@ -1,9 +1,9 @@
 /*
-* @Author: TMall
-* @Date:   2017-06-27 17:57:49
-* @Last Modified by:   0284
-* @Last Modified time: 2017-05-28 19:48:16
-*/
+ * @Author: weimin
+ * @Date:   2017-05-08 15:19:12
+ * @Last Modified by:   weimin
+ * @Last Modified time: 2017-07-12 19:36:18
+ */
 
 'use strict';
 require('./index.css');
@@ -21,7 +21,7 @@ var page = {
             categoryId      : _mm.getUrlParam('categoryId') || '',
             orderBy         : _mm.getUrlParam('orderBy')    || 'default',
             pageNum         : _mm.getUrlParam('pageNum')    || 1,
-            pageSize        : _mm.getUrlParam('pageSize')   || 20
+            pageSize        : _mm.getUrlParam('pageSize')   || 2
         }
     },
     init : function(){

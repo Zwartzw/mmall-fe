@@ -1,7 +1,7 @@
 /*
-* @Author: Rosen
+* @Author: weimin
 * @Date:   2017-05-28 11:58:08
-* @Last Modified by:   Rosen
+* @Last Modified by:   weimin
 * @Last Modified time: 2017-05-28 15:36:16
 */
 
@@ -15,7 +15,7 @@ var Pagination = function(){
     this.defaultOption = {
         container       : null,
         pageNum         : 1,
-        pageRange       : 3,
+        pageRange       : 3,//左右浮动范围
         onSelectPage    : null
     };
     // 事件的处理
@@ -66,7 +66,7 @@ Pagination.prototype.getPaginationHtml = function(){
             value : i,
             active : (i === option.pageNum)
         });
-    };
+    }
     // 下一页按钮的数据
     pageArray.push({
         name : '下一页',
@@ -80,5 +80,5 @@ Pagination.prototype.getPaginationHtml = function(){
     });
     return html;
 };
-
+//导出模块
 module.exports = Pagination;

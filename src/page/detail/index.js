@@ -1,7 +1,7 @@
 /*
-* @Author: Rosen
+* @Author: 0284
 * @Date:   2017-05-28 19:45:49
-* @Last Modified by:   Rosen
+* @Last Modified by:   0284
 * @Last Modified time: 2017-05-29 18:39:01
 */
 
@@ -17,7 +17,7 @@ var templateIndex   = require('./index.string');
 
 var page = {
     data : {
-        productId : _mm.getUrlParam('productId') || '',
+        productId : _mm.getUrlParam('productId') || ''
     },
     init : function(){
         this.onLoad();
