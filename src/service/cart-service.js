@@ -1,7 +1,7 @@
 /*
-* @Author: WillGiab
+* @Author: 0284
 * @Date:   2017-06-14 11:46:02
-* @Last Modified by:   WillGiab
+* @Last Modified by:   0284
 * @Last Modified time: 2017-06-14 11:50:09
 */
 
@@ -17,6 +17,14 @@ var _cart = {
             success : resolve,
             error   : reject 
         });
+    },
+    addToCart:function (productInfo,resolve,reject) {
+        _mm.request({
+            url:_mm.getServerUrl('/cart/add.do'),
+            data:productInfo,
+            success:resolve,
+            error:reject
+        })
     }
 };
 module.exports = _cart;
