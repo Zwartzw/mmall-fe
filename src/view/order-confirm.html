@@ -20,76 +20,62 @@
     <div class="panel">
         <h1 class="panel-title">收货地址</h1>
         <div class="panel-body address-con">
-            <div class="address-item">
-                <div class="address-title">北京 北京 （WEIMIN收）</div>
-                <div class="address-detail">朝阳区三里屯很多字很多字很多字很多字哈哈哈哈哈哈哈哈 15811112222</div>
-                <div class="address-opera">
-                    <span class="link address-update">编辑</span>
-                    <span class="link address-delete">删除</span>
-                </div>
-            </div>
-            <div class="address-item active">
-                <div class="address-title">北京 北京 （WEIMIN收）</div>
-                <div class="address-detail">朝阳区三里屯 15811112222</div>
-                <div class="address-opera">
-                    <span class="link address-update">编辑</span>
-                    <span class="link address-delete">删除</span>
-                </div>
-            </div>
-            <div class="address-item address-add">
-                <div class="address-new">
-                    <i class="fa fa-plus"></i>
-                    <div class="text">使用新地址</div>
-                </div>
-            </div>
+
         </div>
     </div>
     <div class="panel">
         <h1 class="panel-title">商品清单</h1>
         <div class="panel-body product-con">
-            <table class="product-table">
-                <tr>
-                    <th class="cell-img">&nbsp;</th>
-                    <th class="cell-info">商品描述</th>
-                    <th class="cell-price">价格</th>
-                    <th class="cell-count">数量</th>
-                    <th class="cell-total">小计</th>
-                </tr>
-                <tr>
-                    <td class="cell-img">
-                        <a href="./detail.html?productId=XXX" target="_blank">
-                            <img class="p-img"
-                                 src="http://img.happymmall.com/241997c4-9e62-4824-b7f0-7425c3c28917.jpeg"
-                                 alt="XXX"/>
-                        </a>
-                    </td>
-                    <td class="cell-info">
-                        <a href="./detail.html?productId=XXX" class="link">Thinkpad 旗舰</a>
-                    </td>
-                    <td class="cell-price">￥200</td>
-                    <td class="cell-count">20</td>
-                    <td class="cell-total">￥4000</td>
-                </tr>
-                <tr>
-                    <td class="cell-img">
-                        <a href="./detail.html?productId=XXX" target="_blank">
-                            <img class="p-img"
-                                 src="http://img.happymmall.com/241997c4-9e62-4824-b7f0-7425c3c28917.jpeg"
-                                 alt="XXX"/>
-                        </a>
-                    </td>
-                    <td class="cell-info">
-                        <a href="./detail.html?productId=XXX" class="link">Thinkpad 旗舰</a>
-                    </td>
-                    <td class="cell-price">￥200</td>
-                    <td class="cell-count">20</td>
-                    <td class="cell-total">￥4000</td>
-                </tr>
-            </table>
-            <div class="submit-con">
-                <span>订单总价:</span>
-                <span class="submit-total">￥100000000</span>
-                <span class="btn order-submit">提交订单</span>
+
+        </div>
+    </div>
+</div>
+<div class="modal-wrap">
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h1 class="modal-title">使用新地址</h1>
+                <i class="fa fa-close close"></i>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-line">
+                        <label class="label" for="receiver-name">
+                            <span class="required">*</span>收件人姓名
+                        </label>
+                        <input type="text" class="form-item" id="receiver-name" placeholder="请输入收件人姓名"/>
+                    </div>
+                    <div class="form-line">
+                        <label class="label" for="receiver-province">
+                            <span class="required">*</span>所在城市
+                        </label>
+                        <select name="" id="receiver-province" class="form-item">
+                            <option value="">北京</option>
+                        </select>
+                        <select name="" id="receiver-city" class="form-item">
+                            <option value="">北京</option>
+                        </select>
+                    </div>
+                    <div class="form-line">
+                        <label class="label" for="receiver-address">
+                            <span class="required">*</span>详细地址
+                        </label>
+                        <input type="text" class="form-item" id="receiver-address" placeholder="请精确到门牌号"/>
+                    </div>
+                    <div class="form-line">
+                        <label class="label" for="receiver-phone">
+                            <span class="required">*</span>收件人手机
+                        </label>
+                        <input type="text" class="form-item" id="receiver-phone" placeholder="请输入11位手机号"/>
+                    </div>
+                    <div class="form-line">
+                        <label class="label" for="receiver-zip">邮政编码</label>
+                        <input type="text" class="form-item" id="receiver-zip" placeholder="如：100000"/>
+                    </div>
+                    <div class="form-line">
+                        <a href="" class="btn address-btn">保存</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

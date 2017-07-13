@@ -1,5 +1,6 @@
 /* 收货地址 */
-.address-item{
+.address-item,
+.address-add{
     margin: 20px 20px 0 0;
     width:200px;
     padding: 5px 8px;
@@ -10,7 +11,8 @@
 .address-item.active{
     border: 3px dashed #c60023;
 }
-.address-item:hover{
+.address-item:hover,
+.address-add:hover{
     background: #fafafa;
 }
 .address-item .address-title{
@@ -37,16 +39,16 @@
 .address-item .address-opera .link{
     margin-right: 5px;
 }
-.address-item .address-new{
+.address-add .address-new{
     padding: 8px 0;
     text-align: center;
     color: #cccccc;
 }
-.address-item .address-new .fa{
+.address-add .address-new .fa{
     font-size: 50px;
     line-height: 50px;
 }
-.address-item .address-new .text{
+.address-add .address-new .text{
     font-size: 12px;
 }
 
@@ -105,4 +107,85 @@
     line-height: 50px;
     width: 100px;
     text-align: center;
+}
+
+/* 错误信息 */
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+}
+
+/* modal部分 */
+.modal{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #eeeeee;
+    background: rgba(0,0,0,.4);
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal .modal-container{
+    width:700px;
+    margin:50px auto;
+    background: #ffffff;
+    border-radius: 2px;
+}
+.modal .modal-container .modal-header{
+    position:relative;
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+.modal .modal-container .modal-header .modal-title{
+    font-size: 14px;
+}
+.modal .modal-container .modal-header .close{
+    position: absolute;
+    padding: 10px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.modal .modal-container .modal-body{
+    padding: 15px;
+}
+
+/*form部分*/
+.form .form-line{
+    margin:5px 0;
+    overflow: hidden;
+}
+.form .form-line .label{
+    display: block;
+    float: left;
+    width: 85px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.form .form-line .label .required{
+    color:red;
+}
+.form .form-line .form-item {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    margin-right: 10px;
+}
+.form .form-line .btn{
+    margin-left: 95px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
 }
