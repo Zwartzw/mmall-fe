@@ -16,6 +16,7 @@ var nav = {
         this.bindEvent();
         this.loadUserInfo();
         this.loadCartCount();
+        return this;
     },
     bindEvent : function(){
         // 登录点击事件
@@ -46,7 +47,7 @@ var nav = {
         });
     },
     // 加载购物车数量
-    loadCartCount : function(res){
+    loadCartCount : function(){
         _cart.getCartCount(function(res){
             $('.nav .cart-count').text(res || 0);
         }, function(errMsg){

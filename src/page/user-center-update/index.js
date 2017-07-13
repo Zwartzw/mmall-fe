@@ -17,19 +17,19 @@ var templateIndex   = require('./index.string')
 
 // page 逻辑部分
 var page = {
-    init:function () {
+    init         :function () {
         this.onLoad();
         this.bindEvent();
     },
-    onLoad:function () {
+    onLoad       :function () {
         //初始化左侧菜单
         navSide.init({
             name:'user-center'
         });
         //加载用户信息
-        this.loadUserInfo();
+        this.loadOrderList();
     },
-    bindEvent:function () {
+    bindEvent    :function () {
         var _this = this;
         $(document).on('click','.btn-submit',function () {
             var userInfo = {
@@ -52,7 +52,7 @@ var page = {
         })
     },
     //加载用户信息
-    loadUserInfo : function () {
+    loadOrderList: function () {
         var userHtml = '';
         _user.getUserInfo(function (res) {
             userHtml = _mm.renderHtml(templateIndex, res);
