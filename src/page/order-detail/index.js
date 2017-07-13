@@ -38,7 +38,7 @@ var page = {
             }
         });
     },
-    // 加载订单数据
+    // 加载订单 数据
     loadDetail    : function () {
         var _this         = this,
             orderDetailHtml = '',
