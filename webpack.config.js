@@ -21,6 +21,7 @@ var getHtmlConfig = function (name, title) {
     };
 };
 // webpack config
+var config        = {
     entry    : {
         'common'            : ['./src/page/common/index.js'],
         'index'             : ['./src/page/index/index.js'],
@@ -39,6 +40,9 @@ var getHtmlConfig = function (name, title) {
         'result'            : ['./src/page/result/index.js']
     },
     output   : {
+        path      : './dist',
+        publicPath: '/dist',
+        filename  : 'js/[name].js'
     },
     externals: {
         'jquery': 'window.jQuery'
@@ -48,8 +52,11 @@ var getHtmlConfig = function (name, title) {
             {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
             {test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'},
             {
+                test  : /\.string$/,
                 loader: 'html-loader',
                 query : {
+                    minimize             : true,
+                    removeAttributeQuotes: false
                 }
             }
         ]
