@@ -11,6 +11,7 @@ var _order              = require('service/order-service.js');
 var _address            = require('service/address-service.js');
 var templateAddress     = require('./address-list.string');
 var templateProduct     = require('./product-list.string');
+var addressModal        = require('./address-modal');
 
 var page = {
     data: {
@@ -46,6 +47,15 @@ var page = {
             }else{
                 _mm.errorTips('请选择地址后提交');
             }
+        });
+        // 添加地址
+        $(document).on('click', '.address-add', function(){
+           addressModal.show({
+               isUpdate : false,
+               onSuccess: function () {
+                   _this.loadAddressList();
+               }
+           })
         });
     },
     // 加载地址列表信息
