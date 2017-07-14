@@ -15,7 +15,7 @@ var Pagination      = require('util/pagination/index.js');
 var templateIndex   = require('./index.string');
 
 var page = {
-    data          : {
+    data           : {
         listParam : {
             keyword         : _mm.getUrlParam('keyword')    || '',
             categoryId      : _mm.getUrlParam('categoryId') || '',
@@ -24,14 +24,14 @@ var page = {
             pageSize        : _mm.getUrlParam('pageSize')   || 20
         }
     },
-    init          : function(){
+    init           : function(){
         this.onLoad();
         this.bindEvent();
     },
-    onLoad        : function(){
-        this.loadDetail();
+    onLoad         : function(){
+        this.loadPaymentInfo();
     },
-    bindEvent     : function(){
+    bindEvent      : function(){
         var _this = this;
         // 排序的点击事件
         $('.sort-item').click(function(){
@@ -65,11 +65,11 @@ var page = {
                 }
             }
             // 重新加载列表
-            _this.loadDetail();
+            _this.loadPaymentInfo();
         });
     },
     // 加载list数据
-    loadDetail    : function(){
+    loadPaymentInfo: function(){
         var _this       = this,
             listHtml    = '',
             listParam   = this.data.listParam,
@@ -97,14 +97,14 @@ var page = {
         });
     },
     // 加载分页信息
-    loadPagination: function(pageInfo){
+    loadPagination : function(pageInfo){
         var _this = this;
         this.pagination ? '' : (this.pagination = new Pagination());
         this.pagination.render($.extend({}, pageInfo, {
             container : $('.pagination'),
             onSelectPage : function(pageNum){
                 _this.data.listParam.pageNum = pageNum;
-                _this.loadDetail();
+                _this.loadPaymentInfo();
             }
         }));
     }

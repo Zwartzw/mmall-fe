@@ -16,21 +16,21 @@ var _cart           = require('service/cart-service.js');
 var templateIndex   = require('./index.string');
 
 var page = {
-    data : {
+    data           : {
         productId : _mm.getUrlParam('productId') || ''
     },
-    init : function(){
+    init           : function(){
         this.onLoad();
         this.bindEvent();
     },
-    onLoad : function(){
+    onLoad         : function(){
         // 如果没有传productId, 自动跳回首页
         if(!this.data.productId){
             _mm.goHome();
         }
-        this.loadDetail();
+        this.loadPaymentInfo();
     },
-    bindEvent : function(){
+    bindEvent      : function(){
         var _this = this;
         // 图片预览
         $(document).on('mouseenter', '.p-img-item', function(){
@@ -64,7 +64,7 @@ var page = {
         });
     },
     // 加载商品详情的数据
-    loadDetail : function(){
+    loadPaymentInfo: function(){
         var _this       = this,
             html        = '',
             $pageWrap   = $('.page-wrap');
