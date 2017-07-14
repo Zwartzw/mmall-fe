@@ -21,7 +21,7 @@
 
 # 模块功能总结
 主要业务模块包括：用户模块、商品模块、购物车模块及订单模块、支付模块等。
-关于各个模块在开发过程中，学习到的新的知识点，我整理在这里：[模块介绍](mmall-fe/doc/ModuleIntroduction.md)
+关于各个模块在开发过程中，学习到的新的知识点，我整理在这里：[模块介绍](https://github.com/Liweimin0512/mmall-fe/blob/master/doc/ModuleIntroduction.md)
 # 数据统计及SEO优化
 正在开发中
 # 部署上线及项目自动化发布
