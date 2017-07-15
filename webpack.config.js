@@ -13,7 +13,7 @@ var getHtmlConfig = function (name, title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
-        // favicon : './favicon.ico',
+        favicon : './favicon.ico',
         title   : title,
         inject  : true,
         hash    : true,
@@ -38,11 +38,12 @@ var config        = {
         'user-center-update': ['./src/page/user-center-update/index.js'],
         'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
-        'result'            : ['./src/page/result/index.js']
+        'result'            : ['./src/page/result/index.js'],
+        'about'             : ['./src/page/about/index.js']
     },
     output   : {
-        path      : './dist',
-        publicPath: '/dist',
+        path      : __dirname + '/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.imitationtmall.xin/mmall-fe/dist/',
         filename  : 'js/[name].js'
     },
     externals: {
@@ -94,7 +95,8 @@ var config        = {
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
-        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于页面'))
     ]
 
 };
