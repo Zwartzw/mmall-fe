@@ -35,7 +35,7 @@ var _mm = {
     },
     //获取服务器地址
     getServerUrl : function(path){
-        return conf.serverhost + path;
+        return conf.serverHost + path;
     },
     //获取url参数
     getUrlParam :function(name){
