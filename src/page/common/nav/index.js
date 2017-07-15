@@ -1,16 +1,13 @@
-/*
-* @Author: WillGiab
-* @Date:   2017-06-13 23:26:03
-* @Last Modified by:   WillGiab
-* @Last Modified time: 2017-06-14 12:10:21
-*/
+/**
+ * Created by weimin on 2017/6/13 0012.
+ */
 
 'use strict';
 require('./index.css');
 var _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
 var _cart = require('service/cart-service.js');
-
+// 导航
 var nav = {
     init : function(){
         this.bindEvent();
