@@ -1,8 +1,8 @@
 /*
 * @Author: weimin
 * @Date:   2017-05-09 17:16:19
-* @Last Modified by:   weimin
-* @Last Modified time: 2017-05-26 19:25:17
+* @Last Modified by:   WillGiab
+* @Last Modified time: 2017-07-16 23:00:04
 */
 
 /* keywords-list */
@@ -126,4 +126,26 @@
     width: 80%;
     height: 75%;
     border: none;
+}
+/* notice */
+.notice-con{
+    background: #c60023;
+    padding: 5px 0;
+    line-height: 30px;
+}
+.notice-con .notice {
+    font-size: 14px;
+    color: #eee;
+    font-weight: 700;
+    text-align: center;
+}
+.notice-con .notice .mail-link {
+    color: #eee;
+    text-decoration: none;
+}
+.notice-con .notice .notice-link {
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    background: #fb5505;
 }
