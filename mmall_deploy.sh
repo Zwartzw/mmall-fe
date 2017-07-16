@@ -6,8 +6,8 @@
 #admin:front_deploy.sh admin_fe
 #
 
-GIT_HOME=/developer/git-repository/
-DEST_PATH=/product/frontend/
+GIT_HOME=/developer/git-repository
+DEST_PATH=/product/frontend
 
 # clear git dist
 echo -e "==============Clear git Dist=========="
@@ -31,11 +31,11 @@ npm run dist
 if [ -d "./dist" ]; 
     then 
     echo -e "==============dest backup=========="
-    mv $DEST_PATHmmall_fe/dist $DEST_PATHmmall_fe/dist.bak
+    mv $DEST_PATH/mmall_fe/dist $DEST_PATH/mmall_fe/dist.bak
 
     #copy
     echo -e "==============dest copy=========="
-    cp -R ./dist $DEST_PATHmmall_fe/
+    cp -R ./dist $DEST_PATH/mmall_fe/
 
     #echo result
     echo -e "============Deploy Success========"
